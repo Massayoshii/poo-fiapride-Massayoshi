@@ -1,22 +1,33 @@
 package br.com.fiapride.model;
 
 public class Celular {
+
     private String marca;
     private int bateria = 100;
     private boolean ligado;
+    private Dono dono;
 
-    public Celular(String marca, int bateria) {
+    public Celular(String marca, int bateria, Dono dono) {
         this.setMarca(marca);
         this.setBateria(bateria);
         this.setLigado(false);
+        this.dono = dono;
     }
 
     public void statusCelular() {
+
         if (ligado && bateria > 0) {
-            System.out.println("----- STATUS -----");
+
+            System.out.println("--- STATUS ---");
+
+            if (dono != null) {
+                System.out.println("Usuario: " + dono.getNome() + " | Idade: " + dono.getIdade());
+            }
+
             System.out.println("Marca: " + this.marca);
             System.out.println("Bateria atual: " + this.bateria + "%");
-            System.out.println("------------------");
+            System.out.println("--------------");
+
         } else {
             System.out.println("Celular desligado ou sem bateria");
         }
@@ -91,5 +102,9 @@ public class Celular {
 
     public void setLigado(boolean ligado) {
         this.ligado = ligado;
+    }
+
+    public Dono getDono() {
+        return dono;
     }
 }
