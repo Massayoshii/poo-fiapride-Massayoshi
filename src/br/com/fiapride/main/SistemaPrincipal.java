@@ -6,11 +6,16 @@ public class SistemaPrincipal {
     static void main() {
         Celular meuCelular = new Celular();
         meuCelular.marca = "Iphone";
+        meuCelular.ligar();
+        meuCelular.carregarCelular(15);
+        meuCelular.statusCelular();
+        meuCelular.desligar();
 
         Celular celularDoProfessor = new Celular();
         celularDoProfessor.marca = "Samsung";
-
-        System.out.println("O meu celular é: "+ meuCelular.marca);
-        System.out.println("O celular do professor é: "+ celularDoProfessor.marca);
+        celularDoProfessor.ligar();
+        celularDoProfessor.carregarCelular(5);
+        celularDoProfessor.statusCelular();
+        celularDoProfessor.desligar();
     }
 }
