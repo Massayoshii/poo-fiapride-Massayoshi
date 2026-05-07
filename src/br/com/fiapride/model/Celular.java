@@ -1,9 +1,9 @@
 package br.com.fiapride.model;
 
 public class Celular {
-    public String marca;
-    public int bateria = 100;
-    public boolean ligado;
+    private String marca;
+    private int bateria = 100;
+    private boolean ligado;
 
     public void statusCelular() {
         if (ligado && bateria > 0) {
@@ -51,5 +51,39 @@ public class Celular {
         } else {
             System.out.println("Valor inválido");
         }
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+
+        if (marca != null && !marca.isEmpty()) {
+            this.marca = marca;
+        } else {
+            System.out.println("Marca inválida");
+        }
+    }
+
+    public int getBateria() {
+        return bateria;
+    }
+
+    public void setBateria(int bateria) {
+
+        if (bateria >= 0 && bateria <= 100) {
+            this.bateria = bateria;
+        } else {
+            System.out.println("Bateria inválida");
+        }
+    }
+
+    public boolean isLigado() {
+        return ligado;
+    }
+
+    public void setLigado(boolean ligado) {
+        this.ligado = ligado;
     }
 }
