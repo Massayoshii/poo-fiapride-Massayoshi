@@ -4,15 +4,13 @@ import br.com.fiapride.model.Celular;
 
 public class SistemaPrincipal {
     static void main() {
-        Celular meuCelular = new Celular();
-        meuCelular.marca = "Iphone";
+        Celular meuCelular = new Celular("Iphone",100);
         meuCelular.ligar();
         meuCelular.carregarCelular(15);
         meuCelular.statusCelular();
         meuCelular.desligar();
 
-        Celular celularDoProfessor = new Celular();
-        celularDoProfessor.marca = "Samsung";
+        Celular celularDoProfessor = new Celular("Samsung",75);
         celularDoProfessor.ligar();
         celularDoProfessor.carregarCelular(5);
         celularDoProfessor.statusCelular();

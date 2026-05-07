@@ -5,6 +5,12 @@ public class Celular {
     private int bateria = 100;
     private boolean ligado;
 
+    public Celular(String marca, int bateria) {
+        this.setMarca(marca);
+        this.setBateria(bateria);
+        this.setLigado(false);
+    }
+
     public void statusCelular() {
         if (ligado && bateria > 0) {
             System.out.println("----- STATUS -----");
