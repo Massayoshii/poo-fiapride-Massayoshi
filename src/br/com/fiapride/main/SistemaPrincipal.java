@@ -10,16 +10,16 @@ public class SistemaPrincipal {
         iphone.ligar();
         iphone.usarSiri();
         iphone.baixarAplicativo("Tiktok",3.5);
-        iphone.statusIphone();
+        iphone.statusCelular();
         iphone.desligar();
 
         System.out.println("----------------------------------------");
 
-        Android android = new Android("Samsung", 90, "Android 15", "Samsung", 90);
+        Android android = new Android("Samsung", 90, "Android 15",  90);
         android.ligar();
         android.usarGoogleAssistente();
         android.baixarAplicativo("WhatsApp" , 2.5);
-        android.statusAndroid();
+        android.statusCelular();
         android.desligar();
 
     }

@@ -10,11 +10,13 @@ public class Iphone extends Celular {
         this.siriAtivada = siriAtivada;
     }
 
-    public void statusIphone() {
-        statusCelular();
-        System.out.println("Armazenamento atual: "+ this.armazenamento);
-        System.out.println("--------------");
-
+    @Override
+    public void statusCelular(){
+        System.out.println("--- STATUS ---");
+        System.out.println("Marca: " + this.getMarca());
+        System.out.println("Bateria atual: " + this.getBateria() + "%");
+        System.out.println("Armazenamento atual: "+ this.armazenamento + "gb");
+        System.out.println("Siri Ativada: "+ this.siriAtivada);
     }
 
     public void usarSiri() {

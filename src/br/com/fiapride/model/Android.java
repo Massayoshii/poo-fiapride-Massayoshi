@@ -2,14 +2,13 @@ package br.com.fiapride.model;
 
 public class Android extends Celular{
     private String versaoAndroid;
-    private String fabricante;
-    private int armazenamento;
+    private double armazenamento;
 
-    public Android(String marca, int bateria, String versaoAndroid,  String fabricante, int armazenamento) {
+    public Android(String marca, int bateria, String versaoAndroid, double armazenamento) {
         super(marca, bateria);
         this.setVersaoAndroid(versaoAndroid);
         this.setArmazenamento(armazenamento);
-        this.setFabricante(fabricante);
+
     }
 
     public void usarGoogleAssistente() {
@@ -25,13 +24,12 @@ public class Android extends Celular{
         System.out.println("Voce baixou o aplicativo " + nome + " de " + memoria + "GB");
     }
 
-    public void statusAndroid() {
-
-        statusCelular();
-
-        System.out.println("Fabricante: " + fabricante);
-        System.out.println("Versão Android: " + versaoAndroid);
-        System.out.println("-------------------------------");
+    public void statusCelular(){
+        System.out.println("--- STATUS ---");
+        System.out.println("Marca: " + this.getMarca());
+        System.out.println("Bateria atual: " + this.getBateria() + "%");
+        System.out.println("Versao Atual:"+this.versaoAndroid);
+        System.out.println("Armazenamento:"+this.armazenamento);
     }
 
     public String getVersaoAndroid() {
@@ -44,21 +42,12 @@ public class Android extends Celular{
         }
     }
 
-    public String getFabricante() {
-        return fabricante;
-    }
 
-    public void setFabricante(String fabricante) {
-        if(fabricante != null && !fabricante.isEmpty()){
-            this.fabricante = fabricante;
-        }
-    }
-
-    public int getArmazenamento() {
+    public double getArmazenamento() {
         return armazenamento;
     }
 
-    public void setArmazenamento(int armazenamento) {
+    public void setArmazenamento(double armazenamento) {
         if(armazenamento > 0 ){
             this.armazenamento = armazenamento;
         }
