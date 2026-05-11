@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Celular {
+public  abstract class  Celular {
 
     private String marca;
     private int bateria = 100;
@@ -14,16 +14,7 @@ public class Celular {
 
     }
 
-    public void statusCelular() {
-        if (ligado && bateria > 0) {
-            System.out.println("--- STATUS ---");
-            System.out.println("Marca: " + this.marca);
-            System.out.println("Bateria atual: " + this.bateria + "%");
-
-        } else {
-            System.out.println("Celular desligado ou sem bateria");
-        }
-    }
+    public abstract void statusCelular();
 
     public void ligar() {
 
